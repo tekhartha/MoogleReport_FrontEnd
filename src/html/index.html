@@ -15,18 +15,37 @@
 <body>
     <div class="container">
         <h1>Moogle Mail</h1>
-        <div id="output"></div>
+
+        <div id="buttons">
+            <button id="btn-login" onclick="newChatClick()">New Chat</button>
+            <button id="btn-login" onclick="msgCenterClick()">Message Center</button>
+        </div>
+
+        <div id="output" style="padding: 10px"></div>
     </div>
 </body>
 
 <script>
+    function newChatClick() {
+        const { ipcRenderer } = require('electron');
+        ipcRenderer.send('newChat');
+    }
+</script>
+
+<script>
+    function msgCenterClick() {
+        const { ipcRenderer } = require('electron');
+        ipcRenderer.send('msgCenter'); 
+
+    }
+</script>
+
+<script>
     let output = `
     Running on:
-    <ul>
-        <li>Node: ${process.versions.node}</li>
-        <li>Chrome: ${process.versions.chrome}</li>
-        <li>Electron: ${process.versions.electron}</li>
-    </ul>
+        Node: ${process.versions.node} ||
+        Chrome: ${process.versions.chrome} ||
+        Electron: ${process.versions.electron}
     `;
     document.getElementById('output').innerHTML = output;
 </script>
