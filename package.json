@@ -1,0 +1,14 @@
+{
+  "name": "mooglereport_frontend",
+  "version": "1.0.0",
+  "description": "Client side for MoogleTeam End2End chat",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "J Nguyen, P Wang",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.10"
+  }
+}
