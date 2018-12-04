@@ -15,7 +15,7 @@ function createMainWindow() {
     
     // Load index.html
     win.loadURL(url.format({
-        pathname: path.join(__dirname, '/src/html/index.html'),
+        pathname: path.join(__dirname, '/src/html/register.html'),
         //pathname: path.resolve('/index.html'),
         protocol: 'file',
         slashes: true

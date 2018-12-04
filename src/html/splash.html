@@ -17,28 +17,13 @@
         <h1>Moogle Mail</h1>
 
         <div id="buttons">
-            <button id="btn-newchat" onclick="newChatClick()">New Chat</button>
-            <button id="btn-msgcenter" onclick="msgCenterClick()">Message Center</button>
+            <button id="btn-register" onclick="registerClick()">Register</button>
+            <button id="btn-login" onclick="loginClick()">Login</button>
         </div>
 
         <div id="output" style="padding: 10px"></div>
     </div>
 </body>
-
-<script>
-    function newChatClick() {
-        const { ipcRenderer } = require('electron');
-        ipcRenderer.send('newChat');
-    }
-</script>
-
-<script>
-    function msgCenterClick() {
-        const { ipcRenderer } = require('electron');
-        ipcRenderer.send('msgCenter'); 
-
-    }
-</script>
 
 <script>
     let output = `
